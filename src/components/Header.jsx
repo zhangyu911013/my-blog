@@ -2,6 +2,7 @@ import React from 'react';
 import AppBar from 'material-ui/AppBar';
 import FlatButton from 'material-ui/FlatButton';
 import logo from '../logo.svg';
+import { Link } from 'react-router-dom';
 
 export default () => (
   <div>
@@ -12,8 +13,8 @@ export default () => (
 );
 const NavBtns = () => (
   <div>
-    <FlatButton label="首页"/>
-    <FlatButton label="博客"/>
-    <FlatButton label="关于"/>
+    <Link to="/"><FlatButton label="首页"/></Link>
+    <Link to="/blog"><FlatButton label="博客"/></Link>
+    <Link to="/about"><FlatButton label="关于"/></Link>
   </div>
 );
