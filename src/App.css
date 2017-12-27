@@ -1,5 +1,43 @@
-.App {
+@media (max-width: 768px) {
+  .left-sidebar {
+    display: none;
+  }
+}
+
+@media (min-width: 888px) {
+  .container {
+    width: 800px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 870px;
+  }
+}
+
+
+.container {
+  margin: 90px auto 0;
+  padding: 0 15px;
+}
+
+.footer {
+  padding: 52px 24px;
   text-align: center;
+  background: rgb(33, 33, 33);
+  color: rgba(255, 255, 255, 0.54);
+}
+.footer p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+.footer em {
+  color: rgba(255, 255, 255, 0.87);
+  font-style: normal;
+}
+.footer .iconfont {
+  color: rgba(255, 255, 255, 0.87);
 }
 
 .App-logo {
@@ -7,22 +45,13 @@
   height: 40px;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
 
-.App-title {
-  font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
-}
 
 @keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
