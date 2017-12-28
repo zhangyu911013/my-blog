@@ -7,7 +7,7 @@ import Footer from './components/Footer';
 import HomePage from './components/routes/homepage';
 import Blog from './components/routes/blog';
 import About from './components/routes/about';
-import RaisedButton from 'material-ui/RaisedButton';
+import Detail from './components/routes/detail';
 
 import { 
   BrowserRouter as Router,
@@ -25,6 +25,7 @@ class App extends Component {
             <Route exact path="/" component={HomePage}/>
             <Route path="/about" component={About}/>
             <Route path="/blog" component={Blog}/>
+            <Route path="/detail/:id" component={Detail}/>
           </div>
           <Footer />
         </div>

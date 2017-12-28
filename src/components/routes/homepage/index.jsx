@@ -6,6 +6,8 @@ import Divider from 'material-ui/Divider';
 import TextField from 'material-ui/TextField';
 import {List, ListItem } from 'material-ui/List';
 import ActionInfo from 'material-ui/svg-icons/action/info';
+
+import { Link } from 'react-router-dom';
 // import MobileTearSheet from 'material-ui';
 
 import listData from '../../../data/articles';
@@ -20,12 +22,14 @@ class HomePage extends React.Component {
   render() {
     const articleCards = listData.data.map((entry) => {
       return (
-        <Card containerStyle={containerStyle} key={entry.id}>
-          <CardHeader title={entry.title} subtitle={entry.publishDate}/>
-          <CardText>
-            {entry.summary}
-          </CardText>
-        </Card>
+        <Link to={`detail/${entry.id}`}>
+          <Card containerStyle={containerStyle} key={entry.id}>
+            <CardHeader title={entry.title} subtitle={entry.publishDate}/>
+            <CardText>
+              {entry.summary}
+            </CardText>
+          </Card>
+        </Link>
       )
     })
     return (
